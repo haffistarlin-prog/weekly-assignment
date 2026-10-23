@@ -9,14 +9,14 @@ void collections() {
     print(fruit); // Output: Apple, Banana, Orange, Mango (one per line)
   }
 
-  Map<String, int> ages = {
-    'Alice': 25,
-    'Bob': 30,
-    'Charlie': 35,
-  };
+  Map<String, int> ages = {'Alice': 25, 'Bob': 30, 'Charlie': 35};
+  ages['hafswah'] = 13;
   print(ages['Alice']); // Output: 25
   print(ages['Bob']); // Output: 30
   print(ages['Charlie']); // Output: 35
+  for (final entry in ages.entries) {
+    print('${entry.key}is ${entry.value}years old');
+  }
 }
 
 void main() {

@@ -11,6 +11,16 @@ class Person {
   }
 }
 
+class Teacher extends Person {
+  String subject;
+  Teacher(String name, int age, this.subject) : super(name, age);
+
+  @override
+  void introduce() {
+    print("hey, my name is $name, i am $age years old and i teach  $subject");
+  }
+}
+
 //inheritance
 class Student extends Person {
   String school;
@@ -29,4 +39,7 @@ void main() {
 
   var student = Student('Sam', 20, 'Makerere University');
   student.introduce(); // uses the overridden version from Student
+
+  var teacher = Teacher('HAFFIE', 23, 'mathematics');
+  teacher.introduce(); // uses the overridden version from Teacher
 }
